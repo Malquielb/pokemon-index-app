@@ -77,7 +77,7 @@ router.get('/data/:pokemonName', (req, res, next) => {
         .then(pokemonData => {
             // Setting temp file name and data
             stringData = JSON.stringify(pokemonData) || "";
-            const path  = __dirname + "/../temp/pokemon-data.txt";
+            const path  = __dirname + "/../pokemon-temp-data/pokemon-data.txt";
             
             // Writting pokemon data to the temp file
             fs.writeFile(path, stringData, (err) => {
